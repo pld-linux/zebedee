@@ -1,13 +1,17 @@
 Summary:	Secure IP Tunnel
 Summary(pl):	Bezpieczny tunel IP
 Name:		zebedee
-Version:	2.4.0
+Version:	2.4.1
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
-# Source0-md5:	1cc957265d58ff0c477043ebdb6cebd0
+# Source0-md5:	d17a556b966b7b8b1a199b2078e32780
 URL:		http://www.winton.org.uk/zebedee/
+BuildRequires:	bzip2-static
+BuildRequires:	openssl-devel
+BuildRequires:	zip-static
+BuildRequires:	zip-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
