@@ -18,16 +18,16 @@
  
 -ZINC = -I../zlib-1.1.4
 -ZLIB = ../zlib-1.1.4/libz.a
-+ZINC = -I /usr/include/
-+ZLIB = /usr/lib/libz.a
++ZINC =
++ZLIB = -lz
  
  # Location of bzlib include and library
  # Set these empty if you don't want bzib2 support
  
 -BZINC = -I../bzip2-1.0.1
 -BZLIB = ../bzip2-1.0.1/libbz2.a
-+BZINC = -I /usr/include
-+BZLIB = /usr/lib/libbz2.a
++BZINC =
++BZLIB = -lbz2
  
  #
  # Tools needed for Perl "POD"-format documentation conversion.
