@@ -10,8 +10,6 @@ Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
 URL:		http://www.winton.org.uk/zebedee/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _sysconfdir     /etc
-
 %description
 Zebedee is a simple program to establish an encrypted, compressed
 "tunnel" for TCP/IP or UDP traffic between two systems. This allows
@@ -32,11 +30,14 @@ Microsoft Windows.
 %setup -q
 
 %build
-%{__make}  OS=linux
+%{__make} \
+	OS=linux
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
+
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
