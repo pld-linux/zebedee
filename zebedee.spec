@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
+Patch0:		zebedee-patch
 # Source0-md5:	d17a556b966b7b8b1a199b2078e32780
 URL:		http://www.winton.org.uk/zebedee/
 BuildRequires:	bzip2-static
@@ -32,6 +33,7 @@ Microsoft Windows.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__make} \
@@ -41,7 +43,8 @@ Microsoft Windows.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	prefix=$RPM_BUILD_ROOT%{_prefix}
+	ROOTDIR=$RPM_BUILD_ROOT%{_prefix} \
+	OS=linux
 
 %clean
 rm -rf $RPM_BUILD_ROOT
