@@ -10,7 +10,7 @@ Patch0:		%{name}-patch
 # Source0-md5:	d17a556b966b7b8b1a199b2078e32780
 URL:		http://www.winton.org.uk/zebedee/
 BuildRequires:	bzip2-devel
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
