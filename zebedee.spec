@@ -6,12 +6,11 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
-Patch0:		zebedee-patch
+Patch0:		%{name}-patch
 # Source0-md5:	d17a556b966b7b8b1a199b2078e32780
 URL:		http://www.winton.org.uk/zebedee/
-BuildRequires:	bzip2-static
+BuildRequires:	bzip2-devel
 BuildRequires:	openssl-devel
-BuildRequires:	zlib-static
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,13 +36,16 @@ Microsoft Windows.
 
 %build
 %{__make} \
-	OS=linux
+	OS=linux \
+	CC="%{__cc}" \
+	OPTIM="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	ROOTDIR=$RPM_BUILD_ROOT%{_prefix} \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	OS=linux
 
 %clean
@@ -51,4 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc
+%doc CHANGES.txt README.txt *.zbd
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
