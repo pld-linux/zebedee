@@ -6,7 +6,9 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
+Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
+Group(pt_BR):	Rede/Utilitários
 Source0:	http://www.winston.org.uk/zebedee/%{name}-%{version}.tar.gz
 URL:		http://www.winston.org.uk/zebedee/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
