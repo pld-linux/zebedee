@@ -1,0 +1,33 @@
+--- Makefile	2002-05-29 19:42:08.000000000 +0200
++++ /home/users/hunter/backups/Makefile~	2004-03-06 01:03:07.000000000 +0100
+@@ -42,22 +42,22 @@
+ 
+ # Location of Blowfish include and library
+ # You can use the versions from OpenSSL if you have it installed, as follows:
+-# BFINC = /usr/include/openssl
+-# BFLIB = -lcrypto
++BFINC = -I /usr/include/openssl
++BFLIB = -lcrypto
+ 
+-BFINC = -I../blowfish-0.9.5a
+-BFLIB = ../blowfish-0.9.5a/libblowfish.a
++#BFINC = -I../blowfish-0.9.5a
++#BFLIB = ../blowfish-0.9.5a/libblowfish.a
+ 
+ # Location of zlib include and library
+ 
+-ZINC = -I../zlib-1.1.4
+-ZLIB = ../zlib-1.1.4/libz.a
++ZINC = -I /usr/include/
++ZLIB = /usr/lib/libz.a
+ 
+ # Location of bzlib include and library
+ # Set these empty if you don't want bzib2 support
+ 
+-BZINC = -I../bzip2-1.0.1
+-BZLIB = ../bzip2-1.0.1/libbz2.a
++BZINC = -I /usr/include
++BZLIB = /usr/lib/libbz2.a
+ 
+ #
+ # Tools needed for Perl "POD"-format documentation conversion.
