@@ -1,12 +1,12 @@
 Summary:	Secure IP Tunnel
 Summary(pl):	Bezpieczny tunel IP
 Name:		zebedee
-Version:	2.0.1
+Version:	2.4.0
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://www.winston.org.uk/zebedee/%{name}-%{version}.tar.gz
-URL:		http://www.winston.org.uk/zebedee/
+Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
+URL:		http://www.winton.org.uk/zebedee/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define _sysconfdir     /etc
@@ -31,8 +31,7 @@ Microsoft Windows.
 %setup -q
 
 %build
-./configure --prefix=%{_prefix}
-%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
+%{__make}  OS=linux
 
 %install
 rm -rf $RPM_BUILD_ROOT
