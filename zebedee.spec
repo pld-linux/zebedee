@@ -11,6 +11,7 @@ Patch0:		%{name}-patch
 URL:		http://www.winton.org.uk/zebedee/
 BuildRequires:	bzip2-devel
 BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	perl-tools-pod
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
