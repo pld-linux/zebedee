@@ -10,8 +10,8 @@ Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
 URL:		http://www.winton.org.uk/zebedee/
 BuildRequires:	bzip2-static
 BuildRequires:	openssl-devel
-BuildRequires:	zip-static
-BuildRequires:	zip-devel
+BuildRequires:	zlib-static
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
