@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Zebedee is a simple program to establish an encrypted, compressed
 "tunnel" for TCP/IP or UDP traffic between two systems. This allows
-data from, for example, telnet, ftp and X sessions to be protected
+data from, for example, telnet, FTP and X sessions to be protected
 from snooping. You can also use compression, either with or without
 data encryption, to gain performance over low-bandwidth networks.
 Adventage: Win32 version.
@@ -26,7 +26,7 @@ Adventage: Win32 version.
 Zebedee jest prostym programem umo¿liwiaj±cym utworzenie szyfrowanego,
 kompresowanego w locie tunelu dla ruchu w protokole IP lub UDP
 pomiêdzy dwoma systemami komputerowymi. Tunel umo¿liwia zabezpieczenie
-przed podsluchem na linii np. sesji telneta, ftpa, sesji okienkowych
+przed podsluchem na linii np. sesji telneta, FTP-a, sesji okienkowych
 X, etc. Du¿ym atutem jest dostêpno¶æ wersji programu dla systemów
 Microsoft Windows.
 
