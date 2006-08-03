@@ -1,0 +1,12 @@
+diff -Nur zebedee-2.4.1/Makefile zebedee-2.4.1.LDFLAGS/Makefile
+--- zebedee-2.4.1/Makefile	2006-08-03 04:20:04.000000000 +0200
++++ zebedee-2.4.1.LDFLAGS/Makefile	2006-08-03 04:20:04.000000000 +0200
+@@ -195,7 +195,7 @@
+ 	@ if test -z "$(OS)"; then echo "Use '$(MAKE) OS=xxx' where xxx is win32, linux, solaris, freebsd, tru64, irix, hpux, macosx or bsdi"; exit 1; fi
+ 
+ zebedee$(EXE) : $(OBJS)
+-	$(CC) $(CFLAGS) -o zebedee$(EXE) $(OBJS) $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) -o zebedee$(EXE) $(OBJS) $(LIBS)
+ 
+ huge.o : huge.h
+ 
