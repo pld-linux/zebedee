@@ -6,8 +6,9 @@ Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.winton.org.uk/zebedee/%{name}-%{version}.tar.gz
-Patch0:		%{name}-patch
 # Source0-md5:	d17a556b966b7b8b1a199b2078e32780
+Patch0:		%{name}-patch
+Patch1:		%{name}-LDFLAGS.patch
 URL:		http://www.winton.org.uk/zebedee/
 BuildRequires:	bzip2-devel
 BuildRequires:	openssl-devel >= 0.9.7d
@@ -34,11 +35,13 @@ Microsoft Windows.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 %build
 %{__make} \
 	OS=linux \
 	CC="%{__cc}" \
+	LDFLAGS="%{rpmldflags}" \
 	OPTIM="%{rpmcflags}"
 
 %install
