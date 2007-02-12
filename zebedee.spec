@@ -1,5 +1,5 @@
 Summary:	Secure IP Tunnel
-Summary(pl):	Bezpieczny tunel IP
+Summary(pl.UTF-8):   Bezpieczny tunel IP
 Name:		zebedee
 Version:	2.4.1
 Release:	2
@@ -24,12 +24,12 @@ from snooping. You can also use compression, either with or without
 data encryption, to gain performance over low-bandwidth networks.
 Adventage: Win32 version.
 
-%description -l pl
-Zebedee jest prostym programem umo¿liwiaj±cym utworzenie szyfrowanego,
+%description -l pl.UTF-8
+Zebedee jest prostym programem umoÅ¼liwiajÄ…cym utworzenie szyfrowanego,
 kompresowanego w locie tunelu dla ruchu w protokole IP lub UDP
-pomiêdzy dwoma systemami komputerowymi. Tunel umo¿liwia zabezpieczenie
+pomiÄ™dzy dwoma systemami komputerowymi. Tunel umoÅ¼liwia zabezpieczenie
 przed podsluchem na linii np. sesji telneta, FTP-a, sesji okienkowych
-X, etc. Du¿ym atutem jest dostêpno¶æ wersji programu dla systemów
+X, etc. DuÅ¼ym atutem jest dostÄ™pnoÅ›Ä‡ wersji programu dla systemÃ³w
 Microsoft Windows.
 
 %prep
