@@ -1,5 +1,5 @@
 Summary:	Secure IP Tunnel
-Summary(pl.UTF-8):   Bezpieczny tunel IP
+Summary(pl.UTF-8):	Bezpieczny tunel IP
 Name:		zebedee
 Version:	2.4.1
 Release:	2
